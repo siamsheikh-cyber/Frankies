@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Frankies Restaurant Arthur Ave | Italian Dining in Bronx Little Italy</title>
+<meta name="description" content="Fine Italian dining in the heart of Bronx Little Italy on Arthur Avenue. Pasta, lasagna, cannoli and cocktails. Order online for delivery and takeout, or call to reserve.">
+<meta property="og:title" content="Frankies Restaurant Arthur Ave">
+<meta property="og:description" content="Fine Italian dining in the heart of Bronx Little Italy, Arthur Avenue.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/66d8e99427b0f25cbd7544f8/1772646869317-5825Q0DQTSQ21NUOFH0V/image-asset.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf5ec; --paper:#fffdf8; --ink:#231815; --muted:#6b5d54;
+    --green:#1f3a2c; --red:#a3271f; --gold:#b98a3e; --line:#e6dccb;
+    --serif:'Cormorant Garamond',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+
+  /* Header */
+  header{position:absolute;inset:0 0 auto 0;z-index:10}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+  .logo{font-family:var(--serif);font-size:1.7rem;font-weight:700;color:#fff;letter-spacing:.02em}
+  .logo small{display:block;font-family:var(--sans);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;font-weight:500;opacity:.85}
+  nav ul{display:flex;gap:28px;list-style:none;align-items:center}
+  nav a{color:#fff;font-size:.88rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500;opacity:.92}
+  nav a:hover{opacity:1;color:#f1d79b}
+  .btn{display:inline-block;padding:14px 28px;border-radius:2px;font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:.2s;border:1.5px solid transparent;cursor:pointer}
+  .btn-red{background:var(--red);color:#fff}
+  .btn-red:hover{background:#861d17}
+  .btn-line{border-color:#fff;color:#fff}
+  .btn-line:hover{background:#fff;color:var(--ink)}
+  .btn-dark{border-color:var(--green);color:var(--green)}
+  .btn-dark:hover{background:var(--green);color:#fff}
+  .menu-toggle{display:none;background:none;border:0;color:#fff;font-size:1.7rem;cursor:pointer}
+
+  /* Hero */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:center;color:#fff;
+    background:linear-gradient(180deg,rgba(15,10,8,.62),rgba(15,10,8,.72)),
+    url('https://images.squarespace-cdn.com/content/v1/66d8e99427b0f25cbd7544f8/1725493688277-MI5ENM8GW6SP9FN942KQ/unsplash-image-4nXkhLCrkLo.jpg') center/cover}
+  .hero .wrap{padding:140px 0 90px;text-align:center}
+  .eyebrow{font-size:.78rem;letter-spacing:.34em;text-transform:uppercase;color:#f1d79b;font-weight:500;margin-bottom:18px}
+  .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.08;max-width:23ch;margin:0 auto 26px}
+  .hero p{max-width:52ch;margin:0 auto 34px;font-size:1.05rem;opacity:.92}
+  .hero .actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .hero-meta{margin-top:46px;font-size:.88rem;letter-spacing:.08em;opacity:.85}
+  .hero-meta span{margin:0 14px}
+
+  /* Sections */
+  section{padding:96px 0}
+  .head{text-align:center;max-width:620px;margin:0 auto 52px}
+  .head .eyebrow{color:var(--red)}
+  .head h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);line-height:1.15;font-weight:600;color:var(--green)}
+  .head p{color:var(--muted);margin-top:14px}
+  .rule{width:56px;height:2px;background:var(--gold);margin:20px auto 0}
+
+  /* Intro */
+  .intro{background:var(--paper)}
+  .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .intro-grid img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px;box-shadow:0 24px 50px -24px rgba(35,24,21,.45)}
+  .intro-grid h2{font-family:var(--serif);font-size:clamp(2rem,4vw,2.9rem);line-height:1.15;color:var(--green);font-weight:600;margin:10px 0 18px}
+  .intro-grid p{color:var(--muted);margin-bottom:16px}
+  .intro-grid .eyebrow{color:var(--red)}
+
+  /* Dishes */
+  .dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .dish{background:var(--paper);border:1px solid var(--line);overflow:hidden;transition:.25s}
+  .dish:hover{transform:translateY(-4px);box-shadow:0 22px 40px -26px rgba(35,24,21,.5)}
+  .dish img{width:100%;aspect-ratio:1/1;object-fit:cover}
+  .dish div{padding:22px 24px 26px}
+  .dish h3{font-family:var(--serif);font-size:1.5rem;color:var(--green);font-weight:600;line-height:1.2}
+  .dish p{color:var(--muted);font-size:.93rem;margin-top:6px}
+  .center{text-align:center;margin-top:46px}
+
+  /* Services */
+  .services{background:var(--green);color:#fff}
+  .services .head h2{color:#fff}
+  .services .head .eyebrow{color:#f1d79b}
+  .services .head p{color:rgba(255,255,255,.75)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .card{border:1px solid rgba(255,255,255,.22);padding:38px 30px;text-align:center;transition:.25s}
+  .card:hover{background:rgba(255,255,255,.06)}
+  .card h3{font-family:var(--serif);font-size:1.7rem;font-weight:600;margin-bottom:10px}
+  .card p{color:rgba(255,255,255,.78);font-size:.95rem;margin-bottom:22px}
+  .card a{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#f1d79b;font-weight:600;border-bottom:1px solid #f1d79b;padding-bottom:3px}
+
+  /* Gallery */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .gallery a{overflow:hidden;display:block;aspect-ratio:1/1}
+  .gallery img{width:100%;height:100%;object-fit:cover;transition:.4s}
+  .gallery a:hover img{transform:scale(1.07)}
+
+  /* Visit */
+  .visit{background:var(--paper)}
+  .visit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;text-align:center}
+  .visit-grid div{border:1px solid var(--line);padding:38px 24px}
+  .visit-grid h3{font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;color:var(--red);font-weight:600;margin-bottom:14px}
+  .visit-grid p{font-family:var(--serif);font-size:1.5rem;line-height:1.35;color:var(--green);font-weight:600}
+  .visit-grid a:hover{color:var(--red)}
+
+  /* Footer */
+  footer{background:#17120f;color:rgba(255,255,255,.7);padding:56px 0 34px;font-size:.9rem}
+  .foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+  footer .logo{color:#fff}
+  footer ul{list-style:none;display:flex;gap:22px;flex-wrap:wrap}
+  footer a:hover{color:#f1d79b}
+  .copy{margin-top:36px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:.8rem}
+
+  /* Mobile call bar */
+  .callbar{display:none}
+
+  @media (max-width:900px){
+    section{padding:70px 0}
+    .intro-grid{grid-template-columns:1fr;gap:36px}
+    .dishes,.cards,.visit-grid{grid-template-columns:1fr}
+    .gallery{grid-template-columns:repeat(2,1fr)}
+    .menu-toggle{display:block}
+    nav ul{display:none;position:absolute;top:70px;right:20px;left:20px;flex-direction:column;background:rgba(23,18,15,.97);padding:26px;gap:18px;border-radius:4px}
+    nav ul.open{display:flex}
+    .callbar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:20;box-shadow:0 -6px 24px rgba(0,0,0,.2)}
+    .callbar a{flex:1;text-align:center;padding:15px 8px;font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+    .callbar a:first-child{background:var(--green);color:#fff}
+    .callbar a:last-child{background:var(--red);color:#fff}
+    body{padding-bottom:52px}
+    .hero-meta span{display:block;margin:4px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="/" class="logo">Frankies<small>Arthur Avenue</small></a>
+    <button class="menu-toggle" aria-label="Open menu" onclick="document.getElementById('links').classList.toggle('open')">&#9776;</button>
+    <nav>
+      <ul id="links">
+        <li><a href="https://www.frankiesrestaurantarthurave.com/menu">Menu</a></li>
+        <li><a href="https://www.frankiesrestaurantarthurave.com/cateringmenu">Catering</a></li>
+        <li><a href="https://www.frankiesrestaurantarthurave.com/privatedining">Private Dining</a></li>
+        <li><a href="https://www.frankiesrestaurantarthurave.com/faq">FAQ</a></li>
+        <li><a class="btn btn-red" href="https://order.toasttab.com/online/frankies-restaurant-arthur-avenue">Order Online</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Frankies Restaurant &middot; Arthur Avenue</p>
+      <h1>Fine Italian Dining in the Heart of Bronx Little Italy</h1>
+      <p>Pasta, lasagna, cannoli and cocktails on Arthur Avenue. Dine in, take it to go, or have it delivered.</p>
+      <div class="actions">
+        <a class="btn btn-red" href="https://order.toasttab.com/online/frankies-restaurant-arthur-avenue">Order Delivery &amp; Takeout</a>
+        <a class="btn btn-line" href="https://www.frankiesrestaurantarthurave.com/menu">View Menu</a>
+      </div>
+     <!-- <p class="hero-meta"><span>2376 Arthur Avenue, Bronx NY</span><span>Open daily 11am &ndash; 10pm</span></p>-->
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="wrap intro-grid">
+      <img src="https://images.squarespace-cdn.com/content/v1/66d8e99427b0f25cbd7544f8/1771460107645-0H050TUXZ5O37UO0R7RJ/image-asset.jpeg" alt="Frankies baked lasagna, cheesy and saucy" loading="lazy">
+      <div>
+        <p class="eyebrow">Welcome</p>
+        <h2>Arthur Avenue Italian, made for sharing</h2>
+        <p>Frankies Restaurant brings fine Italian dining to Arthur Avenue, the Bronx's Little Italy. From a baked lasagna to a plate of spicy rigatoni vodka, the menu is built around classic Italian favorites.</p>
+        <p>Stop in for lunch or dinner any day of the week, order online for delivery and takeout, or ask us about catering and private events.</p>
+        <a class="btn btn-dark" href="https://www.frankiesrestaurantarthurave.com/menu">Explore the Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAVORITES -->
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">From Our Kitchen</p>
+        <h2>House Favorites</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="dishes">
+        <article class="dish">
+          <img src="https://images.squarespace-cdn.com/content/v1/66d8e99427b0f25cbd7544f8/1772646869317-5825Q0DQTSQ21NUOFH0V/image-asset.jpeg" alt="Spicy Rigatoni Vodka" loading="lazy">
+          <div><h3>Spicy Rigatoni Vodka</h3><p>A Frankies pasta favorite with a little heat.</p></div>
+        </article>
+        <article class="dish">
+          <img src="https://images.squarespace-cdn.com/content/v1/66d8e99427b0f25cbd7544f8/1771460107645-0H050TUXZ5O37UO0R7RJ/image-asset.jpeg" alt="Frankies Lasagna" loading="lazy">
+          <div><h3>Frankies Lasagna</h3><p>Cheesy, saucy and baked to perfection.</p></div>
+        </article>
+        <article class="dish">
+          <img src="https://images.squarespace-cdn.com/content/v1/66d8e99427b0f25cbd7544f8/1757455724539-016RY9DS6TJHMRXM91SP/image-asset.jpeg" alt="Pistachio Cream Cannoli" loading="lazy">
+          <div><h3>Pistachio Cream Cannoli</h3><p>A sweet finish to the meal.</p></div>
+        </article>
+      </div>
+      <div class="center"><a class="btn btn-dark" href="https://www.frankiesrestaurantarthurave.com/menu">See the Full Menu</a></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Your Way</p>
+        <h2>Dine In, Take Out, or Celebrate With Us</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3>Delivery &amp; Takeout</h3>
+          <p>Order online and get Frankies at home or ready to pick up.</p>
+          <a href="https://order.toasttab.com/online/frankies-restaurant-arthur-avenue">Order Now</a>
+        </div>
+        <div class="card">
+          <h3>Catering</h3>
+          <p>Feed your whole group with our catering menu.</p>
+          <a href="https://www.frankiesrestaurantarthurave.com/cateringmenu">Catering Menu</a>
+        </div>
+        <div class="card">
+          <h3>Private Dining &amp; Events</h3>
+          <p>Host your next gathering with us on Arthur Avenue.</p>
+          <a href="https://www.frankiesrestaurantarthurave.com/privatedining">Plan an Event</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section>
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">@frankiesrestaurant.nyc</p>
+        <h2>Fresh From Instagram</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="gallery">
+        <a href="https://www.instagram.com/p/DOXBL0vDS75/"><img src="https://images.squarespace-cdn.com/content/v1/66d8e99427b0f25cbd7544f8/1757374825455-DR23TB0E4WO8ELHNQUON/image-asset.jpeg" alt="Frankies pasta trio: spicy rigatoni vodka, fusilli pesto, spaghetti cacio e pepe" loading="lazy"></a>
+        <a href="https://www.instagram.com/p/DFt3dnlOibI/"><img src="https://images.squarespace-cdn.com/content/v1/66d8e99427b0f25cbd7544f8/1738816281661-H1Y0E9UYKBHTON39DXNG/image-asset.jpeg" alt="Passionfruit martini" loading="lazy"></a>
+        <a href="https://www.instagram.com/p/DOcmT-7DI0o/"><img src="https://images.squarespace-cdn.com/content/v1/66d8e99427b0f25cbd7544f8/1757569747417-YFGTXD3IHN0TV4MC8C97/image-asset.jpeg" alt="Dish from Frankies Restaurant" loading="lazy"></a>
+        <a href="https://www.instagram.com/p/DGMivioOWlL/"><img src="https://images.squarespace-cdn.com/content/v1/66d8e99427b0f25cbd7544f8/1739844217887-VAJP1IS5MX033BS1D9KW/image-asset.jpeg" alt="Dish from Frankies Restaurant" loading="lazy"></a>
+      </div>
+      <div class="center"><a class="btn btn-dark" href="https://www.instagram.com/frankiesrestaurant.nyc/">Follow on Instagram</a></div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="visit">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Visit Us</p>
+        <h2>Find Us on Arthur Avenue</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="visit-grid">
+        <div><h3>Address</h3><p><a href="https://maps.google.com/?q=2376+Arthur+Avenue+Bronx+NY+10458" target="_blank" rel="noopener">2376 Arthur Avenue<br>Bronx, NY 10458</a></p></div>
+        <div><h3>Hours</h3><p>Monday &ndash; Sunday<br>11am &ndash; 10pm</p></div>
+        <div><h3>Reservations</h3><p><a href="tel:+13472701452">347-270-1452</a></p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="/" class="logo">Frankies<small>Arthur Avenue</small></a>
+        <p style="margin-top:12px">2376 Arthur Avenue, Bronx NY 10458</p>
+      </div>
+      <ul>
+        <li><a href="https://www.frankiesrestaurantarthurave.com/menu">Menu</a></li>
+        <li><a href="https://order.toasttab.com/online/frankies-restaurant-arthur-avenue">Order Online</a></li>
+        <li><a href="https://www.frankiesrestaurantarthurave.com/cateringmenu">Catering</a></li>
+        <li><a href="https://www.frankiesrestaurantarthurave.com/privatedining">Private Dining</a></li>
+        <li><a href="https://www.frankiesrestaurantarthurave.com/faq">FAQ</a></li>
+        <li><a href="https://www.instagram.com/frankiesrestaurant.nyc/">Instagram</a></li>
+      </ul>
+    </div>
+    <p class="copy">&copy; Frankies Restaurant Arthur Avenue. Redesign draft homepage.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a href="tel:+13472701452">Call to Reserve</a>
+  <a href="https://order.toasttab.com/online/frankies-restaurant-arthur-avenue">Order Online</a>
+</div>
+
+</body>
+</html>
